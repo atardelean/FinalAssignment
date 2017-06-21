@@ -1,6 +1,4 @@
-#Setting current directory
-setwd("/Users/aardelean/Google Drive/MyFiles/ProfDev/Coursera-Data Science/Getting and Cleaning Data")
-getwd()
+
 # Reading the data into R
 fileUrl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 temp<-tempfile()
@@ -79,14 +77,11 @@ names(mydata)<-gsub("^t", "time", names(mydata))
 names(mydata)<-gsub("^f", "frequency", names(mydata))
 names(mydata)<-gsub("BodyBody", "Body", names(mydata))
 
-# write mydata data frame to a csv file named data.csv
-write.csv(mydata, file="data.csv")
-
 # create a data frame with means of measurements by subject and activity
 # The resulting data frame has 180 observations and 68 variables
 mydata_mean<-aggregate(select(mydata, -matches("subject|act_lab")),list(act_lab=mydata$act_lab,subject=mydata$subject),FUN = "mean")
 
 # write mydata_mean data frame to a csv file named tidy_data.csv
-write.csv(mydata_mean, file="tidy_data.csv")
+write.table(mydata_mean, file="tidy_data.txt", row.name=FALSE)
 
 
