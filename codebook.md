@@ -1,4 +1,6 @@
-# The tidy_data.csv file contains information on human activity recognition using smartphones. It is a modified version of the Human Activity Recognition Using Smartphones Dataset Version 1.0.
+# Description of tidy_data.csv  
+
+It contains information on human activity recognition using smartphones. It is a modified version of the Human Activity Recognition Using Smartphones Dataset Version 1.0.
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. The tidy_data.csv file combines both training and test data.
 
@@ -10,6 +12,7 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
 
+#Variables in tidy_data.csv
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
@@ -39,7 +42,7 @@ For each record it is provided:
 - act_lab: The activity performed by the subject: factor variable with 6 levels: \cf3 \outl0\strokewidth0 WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 - numeric values of each of the mean() and std() of each of the above variables averaged for each individual and activity.
 
-Notes: 
+#Notes: 
 ======
 - Features are normalized and bounded within [-1,1].
 - The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
